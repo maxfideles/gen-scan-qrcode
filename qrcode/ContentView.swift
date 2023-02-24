@@ -50,13 +50,16 @@ struct ContentView: View {
                 
                 Button {
                     
-                    imageSaver.saveImage((tes.GerQrCodeImage(endereco)),imglabel)
+                    if shadqrcode {
+                        imageSaver.saveImage((tes.GerQrCodeImage(endereco)),imglabel)
+                    }
                     
                     
                 } label: {
                     Image(systemName: "square.and.arrow.down")
                         .font(.title3.bold())
-                        .foregroundColor(.white)
+                        .disabled(true)
+                       .foregroundColor(shadqrcode ? .white : .gray)
                 }
                 Spacer()
                 

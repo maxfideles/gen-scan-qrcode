@@ -26,7 +26,7 @@ struct testView: View {
                 Text("Gerador QRCode")
                     .font(.system(size: 30, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
-                    .offset(y:-50)
+                    .offset(y:-40)
                 
                 if shadqrcode == false{
                     Image(systemName: "qrcode")
