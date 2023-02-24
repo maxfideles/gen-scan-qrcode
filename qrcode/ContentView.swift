@@ -61,6 +61,11 @@ struct ContentView: View {
                         .disabled(true)
                        .foregroundColor(shadqrcode ? .white : .gray)
                 }
+                .disabled(shadqrcode == false)
+                .alert(item: $imageSaver.saveResult){ saveResult in
+                    return alert(forSaveStatus: saveResult.saveStatus)
+                    
+                }
                 Spacer()
                 
             }
@@ -121,6 +126,33 @@ struct ContentView: View {
             
             
             
+        }
+        
+        
+    }
+    
+    private func alert(forSaveStatus saveStatus: ImageStatus) -> Alert{
+        switch saveStatus {
+        case .Sucess:
+            return Alert(
+                title: Text( "Salvo!"),
+                message: Text("QrCode foi salvo em sua galeria de fotos")
+            )
+        case .error:
+            return Alert(
+                title: Text( "Ooops!"),
+                message: Text("Um erro ocorreu ao salvar seu QrCode")
+            )
+        case .libraryPermitionDenied:
+            return Alert(
+                    title: Text("Oops!"),
+                    message: Text("Este app precisa de permissão para salvar fotos em sua galeriaThis."),
+                    primaryButton: .cancel(Text("Ok")),
+                    secondaryButton: .default(Text("Abrir Configurações")) {
+                      guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+                      UIApplication.shared.open(settingsUrl)
+                    }
+                  )
         }
         
         

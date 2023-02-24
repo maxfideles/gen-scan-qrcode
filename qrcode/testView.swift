@@ -59,10 +59,11 @@ struct testView: View {
                 } label: {
                     Image(systemName: "square.and.arrow.down")
                         .font(.title3.bold())
-                        .disabled(true)
                        .foregroundColor(shadqrcode ? .white : .gray)
                         
                 }
+                .disabled(shadqrcode == false)
+                
                 Spacer()
                 
             }
@@ -127,15 +128,13 @@ struct testView: View {
         }
         
         
+        
+        
     }
     func saveGenerate(){
         
         
-        
-        
         endereco.append(userIn.lowercased())
-        
-        
         
     }
 }

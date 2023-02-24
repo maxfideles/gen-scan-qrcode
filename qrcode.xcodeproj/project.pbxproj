@@ -13,7 +13,6 @@
 		FBCF585129A5A786009637EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCF585029A5A786009637EB /* ContentView.swift */; };
 		FBCF585329A5A789009637EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCF585229A5A789009637EB /* Assets.xcassets */; };
 		FBCF585629A5A789009637EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCF585529A5A789009637EB /* Preview Assets.xcassets */; };
-		FBCF585F29A5A82B009637EB /* QrCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCF585E29A5A82B009637EB /* QrCodeView.swift */; };
 		FBD8556529A6F08800ACC75D /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD8556429A6F08800ACC75D /* ScanView.swift */; };
 		FBD8556729A7001C00ACC75D /* CodeImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD8556629A7001C00ACC75D /* CodeImageSaver.swift */; };
 /* End PBXBuildFile section */
@@ -26,7 +25,6 @@
 		FBCF585029A5A786009637EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FBCF585229A5A789009637EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBCF585529A5A789009637EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FBCF585E29A5A82B009637EB /* QrCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeView.swift; sourceTree = "<group>"; };
 		FBD8556429A6F08800ACC75D /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		FBD8556629A7001C00ACC75D /* CodeImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeImageSaver.swift; sourceTree = "<group>"; };
 		FBD8556829A712A100ACC75D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 				FBCF585029A5A786009637EB /* ContentView.swift */,
 				FBCB59BA29A8FDA1008453A4 /* testView.swift */,
 				FBD8556429A6F08800ACC75D /* ScanView.swift */,
-				FBCF585E29A5A82B009637EB /* QrCodeView.swift */,
 				FBCF585229A5A789009637EB /* Assets.xcassets */,
 				FBCF585429A5A789009637EB /* Preview Content */,
 				FBD8556629A7001C00ACC75D /* CodeImageSaver.swift */,
@@ -160,7 +157,6 @@
 				FBD8556729A7001C00ACC75D /* CodeImageSaver.swift in Sources */,
 				FBD8556529A6F08800ACC75D /* ScanView.swift in Sources */,
 				FBCF584F29A5A786009637EB /* qrcodeApp.swift in Sources */,
-				FBCF585F29A5A82B009637EB /* QrCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
