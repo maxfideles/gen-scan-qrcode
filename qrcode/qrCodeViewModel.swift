@@ -1,34 +1,25 @@
 //
-//  QrCodeView.swift
+//  qrCodeViewModel.swift
 //  qrcode
 //
-//  Created by Max Victor on 21/02/2023.
+//  Created by Max Victor on 24/02/2023.
 //
 
 import Foundation
 import SwiftUI
 import CoreImage.CIFilterBuiltins
 
-struct QrCodeView: View{
+final class qrCodeViewModel: ObservableObject{
     
-    var url: String
+    @Published var url: String? = nil
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
-    var body: some View {
-      
-       Image(uiImage: GenerateQrCodeImage(url))
-            .resizable()
-            .interpolation(.none)
-            .frame(width: 200, height: 200)
-        
-    }
+    let transform = CGAffineTransform(scaleX: 10, y: 10)
     
-    
-    
-    func GenerateQrCodeImage(_ url: String) -> UIImage{
+    func GerQrCodeImage(_ url: String) -> UIImage{
         let data = Data(url.utf8)
         filter.setValue(data, forKey: "inputMessage")
-        if let qrcode = filter.outputImage{
+        if let qrcode = filter.outputImage?.transformed(by: transform){
             if let qrcodeImage = context.createCGImage(qrcode, from: qrcode.extent){
                 
                 let qrcodeFinal = UIImage(cgImage: qrcodeImage)
@@ -38,6 +29,7 @@ struct QrCodeView: View{
         }
         return  UIImage(systemName: "xmark") ?? UIImage()
     }
+    
     
     
 }

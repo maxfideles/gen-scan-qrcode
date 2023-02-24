@@ -18,7 +18,7 @@ struct ScanView: View {
         VStack{
             
             VStack {
-                Text("Gerador QRCode")
+                Text("Scan QRCode")
                     .font(.system(size: 30, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
                     .offset(y:-50)

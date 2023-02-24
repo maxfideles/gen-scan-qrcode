@@ -1,19 +1,21 @@
 //
-//  ContentView.swift
+//  testView.swift
 //  qrcode
 //
-//  Created by Max Victor on 21/02/2023.
+//  Created by Max Victor on 24/02/2023.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+
+struct testView: View {
     @State var endereco:String = ""
     @State var userIn:String = ""
     @State var shadqrcode:Bool = false
     @StateObject private var imageSaver = ImageSaver()
     @EnvironmentObject var tes : qrCodeViewModel
     @State var imglabel:String = "Scaneie com a câmera"
+    
     
     var body: some View {
         
@@ -24,7 +26,7 @@ struct ContentView: View {
                 Text("Gerador QRCode")
                     .font(.system(size: 30, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
-                    .offset(y:-40)
+                    .offset(y:-50)
                 
                 if shadqrcode == false{
                     Image(systemName: "qrcode")
@@ -49,14 +51,17 @@ struct ContentView: View {
                 Spacer()
                 
                 Button {
-                    
-                    imageSaver.saveImage((tes.GerQrCodeImage(endereco)),imglabel)
+                    if shadqrcode {
+                        imageSaver.saveImage((tes.GerQrCodeImage(endereco)),imglabel)
+                    }
                     
                     
                 } label: {
                     Image(systemName: "square.and.arrow.down")
                         .font(.title3.bold())
-                        .foregroundColor(.white)
+                        .disabled(true)
+                       .foregroundColor(shadqrcode ? .white : .gray)
+                        
                 }
                 Spacer()
                 
@@ -72,6 +77,7 @@ struct ContentView: View {
                         .foregroundColor(Color(.white))
                         .background(Color(red: 111/255, green: 18/255, blue: 37/255).cornerRadius(30))
                         .colorScheme(.dark)
+                        
                 
                     Button {
                         withAnimation {
@@ -122,7 +128,6 @@ struct ContentView: View {
         
         
     }
-    
     func saveGenerate(){
         
         
@@ -135,13 +140,9 @@ struct ContentView: View {
     }
 }
 
-
-
-struct ContentView_Previews: PreviewProvider {
+struct testView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        testView()
             .environmentObject(qrCodeViewModel())
-        
-        
     }
 }
