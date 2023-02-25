@@ -144,7 +144,7 @@ struct ContentView: View {
         case .libraryPermitionDenied:
             return Alert(
                     title: Text("Oops!"),
-                    message: Text("Este app precisa de permissão para salvar fotos em sua galeriaThis."),
+                    message: Text("Este app precisa de permissão para salvar fotos em sua galeria."),
                     primaryButton: .cancel(Text("Ok")),
                     secondaryButton: .default(Text("Abrir Configurações")) {
                       guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
