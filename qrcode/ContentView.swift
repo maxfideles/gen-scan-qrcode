@@ -130,7 +130,6 @@ struct ContentView: View {
         
         
     }
-    
     private func alert(forSaveStatus saveStatus: ImageStatus) -> Alert{
         switch saveStatus {
         case .Sucess:
