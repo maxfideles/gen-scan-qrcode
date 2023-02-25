@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB87B6F029AA47D7000BDB52 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB87B6EF29AA47D7000BDB52 /* ScanViewModel.swift */; };
 		FBCB59B729A8FA96008453A4 /* qrCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB59B629A8FA96008453A4 /* qrCodeViewModel.swift */; };
 		FBCB59BB29A8FDA1008453A4 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB59BA29A8FDA1008453A4 /* testView.swift */; };
 		FBCF584F29A5A786009637EB /* qrcodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCF584E29A5A786009637EB /* qrcodeApp.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB87B6EF29AA47D7000BDB52 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
 		FBCB59B629A8FA96008453A4 /* qrCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qrCodeViewModel.swift; sourceTree = "<group>"; };
 		FBCB59BA29A8FDA1008453A4 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		FBCF584B29A5A786009637EB /* qrcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qrcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				FBCF585429A5A789009637EB /* Preview Content */,
 				FBD8556629A7001C00ACC75D /* CodeImageSaver.swift */,
 				FBCB59B629A8FA96008453A4 /* qrCodeViewModel.swift */,
+				FB87B6EF29AA47D7000BDB52 /* ScanViewModel.swift */,
 			);
 			path = qrcode;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				FBCF585129A5A786009637EB /* ContentView.swift in Sources */,
 				FBD8556729A7001C00ACC75D /* CodeImageSaver.swift in Sources */,
 				FBD8556529A6F08800ACC75D /* ScanView.swift in Sources */,
+				FB87B6F029AA47D7000BDB52 /* ScanViewModel.swift in Sources */,
 				FBCF584F29A5A786009637EB /* qrcodeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +292,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = qrcode/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to acces the camera";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app needs permission to save your codes to your library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -318,6 +323,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = qrcode/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs to acces the camera";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app needs permission to save your codes to your library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

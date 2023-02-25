@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct qrcodeApp: App {
+    @StateObject private var svm = ScanViewMode()
     @StateObject private var vm = qrCodeViewModel()
     
     var body: some Scene {
@@ -21,7 +22,10 @@ struct qrcodeApp: App {
                         Text("criar")
                     }
                 ScanView()
-                    .environmentObject(vm)
+                    .environmentObject(svm)
+                    .task {
+                        await svm.requestDataScannerStatus()
+                    }
                     .tabItem {
                         Image(systemName: "camera")
                         Text("Scanear")}

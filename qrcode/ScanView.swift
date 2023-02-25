@@ -10,67 +10,11 @@ import SwiftUI
 
 
 struct ScanView: View {
-    @State var array:String = ""
-    @State var url:String = ""
+   
     
     var body: some View {
-        
-        VStack{
-            
-            VStack {
-                Text("Scan QRCode")
-                    .font(.system(size: 30, weight: .bold, design: .rounded))
-                    .foregroundColor(.white)
-                    .offset(y:-50)
-                
-                Image(systemName: "qrcode")
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .foregroundColor(.white)
-                
-                
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color(red: 111/255, green: 18/255, blue: 37/255 ))
-            
-            VStack{
-                ZStack(alignment: .trailing){
-                    TextField("", text: $url)
-                        .frame(width: 350, height: 50)
-                        .font(.headline.bold())
-                        .foregroundColor(Color(.white))
-                        .background(Color(red: 111/255, green: 18/255, blue: 37/255).cornerRadius(30))
-                        .colorScheme(.dark)
-                    Button {
-                        //
-                    } label: {
-                        Image(systemName: "trash")
-                            .font(.title3.bold())
-                            .foregroundColor(.white)
-                            .padding()
-                    }
-                    
-                }
-                
-                Button {
-                    //
-                } label: {
-                    Text("Acessar")
-                        
-                        .frame(width: 150, height: 50)
-                        .font(.headline.bold())
-                        .foregroundColor(Color(.white))
-                        .background(Color(red: 111/255, green: 18/255, blue: 37/255).cornerRadius(30))
-                        .colorScheme(.dark)
-                }
-                .padding()
-
-            }
-            .frame(maxWidth: .infinity , maxHeight: 300)
-            .background(.white)
-            
-            
-        }
+     
+        Image(systemName: "trash")
         
     }
 }
