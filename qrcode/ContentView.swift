@@ -159,9 +159,7 @@ struct ContentView: View {
     }
     
     func saveGenerate(){
-        
-        
-        
+    
         
         endereco.append(userIn.lowercased())
         
