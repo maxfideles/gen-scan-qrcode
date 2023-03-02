@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ScanView: View {
    
-    @EnvironmentObject var vm: ScanViewMode
+    @EnvironmentObject var vm: ScanViewModel
     
     var body: some View {
      
@@ -40,6 +40,6 @@ struct ScanView: View {
 struct ScanView_Previews: PreviewProvider {
     static var previews: some View {
         ScanView()
-            .environmentObject(ScanViewMode())
+            .environmentObject(ScanViewModel())
     }
 }

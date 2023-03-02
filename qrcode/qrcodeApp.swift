@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct qrcodeApp: App {
-    @StateObject private var svm = ScanViewMode()
+    @StateObject private var svm = ScanViewModel()
     @StateObject private var vm = qrCodeViewModel()
     
     var body: some Scene {

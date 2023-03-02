@@ -10,7 +10,13 @@ import SwiftUI
 import VisionKit
 import AVKit
 
-// creating a enum to representthe data scanner access status type in the app
+// Creating an enum to define the Scan Types
+enum ScanType{
+    case barcode,text
+}
+
+
+// creating a enum to represent the data scanner access status type in the app
 //Based on state we going to present a specific UI
 
 enum DataScannerAccessStatusType{
@@ -23,9 +29,22 @@ enum DataScannerAccessStatusType{
 }
 
 @MainActor //It means that this class will be executed in the Main dispatch queue
-final class ScanViewMode: ObservableObject{
+final class ScanViewModel: ObservableObject{
     
     @Published var dataScannerAccessStatus: DataScannerAccessStatusType = .notDetermined
+    @Published var recognizedItems: [RecognizedItem] = []
+    @Published var scanType: ScanType = .barcode
+    @Published var textContentType: DataScannerViewController.TextContentType?
+    @Published var recognizesMultiplesItems = true
+    
+    
+    //creating a variable that will generate the recognizeDataType based on Published variables
+   
+    var recognizedDataType: DataScannerViewController.RecognizedDataType {
+            scanType == .barcode ? .barcode() : .text(textContentType: textContentType)
+        }
+    
+    
     private var isScannerAvailable: Bool{
         DataScannerViewController.isAvailable && DataScannerViewController.isSupported
     }
