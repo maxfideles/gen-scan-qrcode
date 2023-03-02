@@ -17,7 +17,7 @@ struct ScanView: View {
      
         switch vm.dataScannerAccessStatus{
             case .scannerAvailable:
-                    Text("The scanner is available")
+                   mainScannerView
             case .cameraNoatAvailable :
                     Text("The camera is not available")
             case .scannerNotAvailable:
@@ -27,13 +27,16 @@ struct ScanView: View {
             case .notDetermined:
             Text("Requesting camera access")
             
-                
-        
-            
         }
-        
-        
     }
+    
+    
+    private var mainScannerView: some View{
+        DataScannerView(recognizedItems: $vm.recognizedItems ,
+                        recognizedDataType: vm.recognizedDataType,
+                        reconizeMultipleItens: vm.recognizesMultiplesItems)
+    }
+    
 }
 
 
