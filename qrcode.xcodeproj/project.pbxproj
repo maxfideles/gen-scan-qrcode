@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB6F34E929B129A900D8E719 /* DataScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6F34E829B129A900D8E719 /* DataScannerView.swift */; };
 		FB87B6F029AA47D7000BDB52 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB87B6EF29AA47D7000BDB52 /* ScanViewModel.swift */; };
 		FBCB59B729A8FA96008453A4 /* qrCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB59B629A8FA96008453A4 /* qrCodeViewModel.swift */; };
 		FBCB59BB29A8FDA1008453A4 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB59BA29A8FDA1008453A4 /* testView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB6F34E829B129A900D8E719 /* DataScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerView.swift; sourceTree = "<group>"; };
 		FB87B6EF29AA47D7000BDB52 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
 		FBCB59B629A8FA96008453A4 /* qrCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qrCodeViewModel.swift; sourceTree = "<group>"; };
 		FBCB59BA29A8FDA1008453A4 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				FBCF585029A5A786009637EB /* ContentView.swift */,
 				FBCB59BA29A8FDA1008453A4 /* testView.swift */,
 				FBD8556429A6F08800ACC75D /* ScanView.swift */,
+				FB6F34E829B129A900D8E719 /* DataScannerView.swift */,
 				FBCF585229A5A789009637EB /* Assets.xcassets */,
 				FBCF585429A5A789009637EB /* Preview Content */,
 				FBD8556629A7001C00ACC75D /* CodeImageSaver.swift */,
@@ -161,6 +164,7 @@
 				FBD8556529A6F08800ACC75D /* ScanView.swift in Sources */,
 				FB87B6F029AA47D7000BDB52 /* ScanViewModel.swift in Sources */,
 				FBCF584F29A5A786009637EB /* qrcodeApp.swift in Sources */,
+				FB6F34E929B129A900D8E719 /* DataScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

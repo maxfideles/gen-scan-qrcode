@@ -22,7 +22,7 @@ enum DataScannerAccessStatusType{
     
 }
 
-@MainActor //It mens that this class will be executed inthe Main dispatch queue
+@MainActor //It means that this class will be executed in the Main dispatch queue
 final class ScanViewMode: ObservableObject{
     
     @Published var dataScannerAccessStatus: DataScannerAccessStatusType = .notDetermined

@@ -4,6 +4,8 @@
 //
 //  Created by Max Victor on 21/02/2023.
 //
+//Description
+//QRTap is an app that provides users with a convenient way to create and scan QR codes. It can generate QR codes from either text or a URL, and users can easily scan QR codes to view the associated content. The app also includes a live text scanning feature.
 
 import SwiftUI
 
@@ -21,7 +23,7 @@ struct ContentView: View {
             
             VStack {
                 Spacer()
-                Text("Gerador QRCode")
+                Text("QRTap")
                     .font(.system(size: 30, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
                     .offset(y:-40)
@@ -74,7 +76,7 @@ struct ContentView: View {
             
             VStack{
                 ZStack(alignment: .trailing){
-                    TextField("  Digite endereço...", text: $userIn)
+                    TextField("  Type url or text...", text: $userIn)
                         .frame(width: 350, height: 50)
                         .font(.headline.bold())
                         .foregroundColor(Color(.white))
@@ -109,7 +111,7 @@ struct ContentView: View {
                     
                     
                 } label: {
-                    Text("Gerar")
+                    Text("Generate")
                         
                         .frame(width: 150, height: 50)
                         .font(.headline.bold())
@@ -133,20 +135,20 @@ struct ContentView: View {
         switch saveStatus {
         case .Sucess:
             return Alert(
-                title: Text( "Salvo!"),
-                message: Text("QrCode foi salvo em sua galeria de fotos")
+                title: Text( "Salved!"),
+                message: Text("The QRCode was saved in your photo gallery")
             )
         case .error:
             return Alert(
                 title: Text( "Ooops!"),
-                message: Text("Um erro ocorreu ao salvar seu QrCode")
+                message: Text("An error ocurred while we were trying to save your QRCode")
             )
         case .libraryPermitionDenied:
             return Alert(
                     title: Text("Oops!"),
-                    message: Text("Este app precisa de permissão para salvar fotos em sua galeria."),
+                    message: Text("This App needs the permition to save photos in your photo gallery."),
                     primaryButton: .cancel(Text("Ok")),
-                    secondaryButton: .default(Text("Abrir Configurações")) {
+                    secondaryButton: .default(Text("Open settings")) {
                       guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
                       UIApplication.shared.open(settingsUrl)
                     }

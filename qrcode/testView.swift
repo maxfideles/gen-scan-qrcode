@@ -23,7 +23,7 @@ struct testView: View {
             
             VStack {
                 Spacer()
-                Text("Gerador QRCode")
+                Text("QRTap")
                     .font(.system(size: 30, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
                     .offset(y:-40)
@@ -72,7 +72,7 @@ struct testView: View {
             
             VStack{
                 ZStack(alignment: .trailing){
-                    TextField("  Digite endereço...", text: $userIn)
+                    TextField("Type the url...", text: $userIn)
                         .frame(width: 350, height: 50)
                         .font(.headline.bold())
                         .foregroundColor(Color(.white))
@@ -108,7 +108,7 @@ struct testView: View {
                     
                     
                 } label: {
-                    Text("Gerar")
+                    Text("Generate")
                         
                         .frame(width: 150, height: 50)
                         .font(.headline.bold())
