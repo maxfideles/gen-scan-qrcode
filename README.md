@@ -7,6 +7,7 @@
 <img width="190" alt="image" src="https://user-images.githubusercontent.com/61297641/222842573-f143f238-5053-47ec-9a16-857a2f9af49e.png">
 <img width="190" alt="image" src="https://user-images.githubusercontent.com/61297641/222842652-bed435f7-e672-453f-bbe6-0d272a6cd69b.png">
 <img width="190" alt="image" src="https://user-images.githubusercontent.com/61297641/222843263-d7d835e6-b455-4497-812e-9eb330676a2e.png">
+<a href="https://youtu.be/umlxBY4njIw" target="_blank"><img width="500" alt="image" src="https://user-images.githubusercontent.com/61297641/222874759-503b9d1b-2302-41b0-831e-87d15187f006.png"></a>
 </div>
 
 ## About this project
@@ -14,6 +15,7 @@
 This project, as I called as QRTap, is part of my studies and portfolio as an iOS Software Developer.
 
 The ideia was to create an app where is possible to create easily a Qr Code and save it in iPhone's photo gallery.
+
 
 
 
