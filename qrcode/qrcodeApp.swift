@@ -19,7 +19,7 @@ struct qrcodeApp: App {
                     .environmentObject(vm)
                     .tabItem {
                         Image(systemName: "qrcode")
-                        Text("criar")
+                        Text("Create")
                     }
                 ScanView()
                     .environmentObject(svm)
@@ -28,7 +28,7 @@ struct qrcodeApp: App {
                     }
                     .tabItem {
                         Image(systemName: "camera")
-                        Text("Scanear")}
+                        Text("Scan")}
             }
             .accentColor(.red)
             

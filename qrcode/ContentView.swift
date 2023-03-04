@@ -15,7 +15,7 @@ struct ContentView: View {
     @State var shadqrcode:Bool = false
     @StateObject private var imageSaver = ImageSaver()
     @EnvironmentObject var tes : qrCodeViewModel
-    @State var imglabel:String = "Scaneie com a câmera"
+    @State var imglabel:String = "Scan using the camera"
     
     var body: some View {
         
